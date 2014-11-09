@@ -1,0 +1,141 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
+	<head>
+		<title>Test Shopping Basket</title>
+
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width,initial-scale=1">
+  		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+
+  		<link href='styles/app.css' rel='stylesheet' type='text/css'>
+
+		<script src="lib/jquery/jquery-1.11.1.min.js"></script>
+		<script src="lib/modernizr/modernizr-latest.js"></script>
+		<script src="scripts/app.js"></script>
+	</head>
+
+	<body>
+
+		<div id="wrapper">
+
+			<header>
+				<div class="row">
+					<div class="grid12">
+						<span class="logo">LOGO</span>
+					</div>
+				</div>
+			</header>
+			<div class="section">
+				<div class="row">
+					<div class="grid12">
+						<h1>Your basket </h1>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="row">
+					<div class="grid12">
+						<p>Items you have added to your basket are shown below. Adjust the quantities or remove items before continuing your purchase.</p>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="row">
+					<form id="basket" aria-live="assertive" aria-atomic="true" action="/actionfornoscript">
+						<div aria-hidden="true" class="subrow tableHeader">
+							<div class="grid6">Product</div>
+							<div class="grid2 price">Price</div>
+							<div class="grid2 quantity">Qty</div>
+							<div class="grid2 total">Cost</div>
+						</div>
+						<div class="subrow productRow" id="item-0">
+							<h2 class="product grid6">Cotton T-Shirt, Medium</h2>
+							<div class="price grid2">£1.99</div>
+							<div class="quantity grid2">
+								<label for="quantity-item-0">Qty</label>
+								<input class="quantityValue" name="quantity-item-0" id="quantity-item-0" value="1" />
+								<a href="/alterProductQuantity?item=0&amp;delta=1" title="Increase quantity" class="increase">+</a>
+								<a href="/alterProductQuantity?item=0&amp;delta=-1" title="Decrease quantity" class="decrease">-</a>
+							</div>
+							<div class="total grid2">£1.99</div>
+							<div class="outlier">
+								<a href="/removeProductFromBasket?item=0" title="Remove Cotton T-Shirt" class="removeProduct"></a>
+							</div>
+							<p class="feedback grid12"></p>
+						</div>
+						<div class="subrow productRow alternate" id="item-1">
+							<h2 class="product grid6">Baseball Cap, One size</h2>
+							<div class="price grid2">£2.99</div>
+							<div class="quantity grid2">
+								<label for="quantity-item-1">Qty</label>
+								<input class="quantityValue" name="quantity-item-1" id="quantity-item-1" value="2" />
+								<a href="/alterProductQuantity?item=1&amp;delta=1" title="Increase quantity" class="increase">+</a>
+								<a href="/alterProductQuantity?item=1&amp;delta=-1" title="Decrease quantity" class="decrease">-</a>
+							</div>
+							<div class="total grid2">£5.98</div>
+							<div class="outlier">
+								<a href="/removeProductFromBasket?item=1" title="Remove Baseball Cap" class="removeProduct"></a>
+							</div>
+							<p class="feedback grid12"></p>
+						</div>
+						<div class="subrow productRow" id="item-2">
+							<h2 class="product grid6">Swim shorts, Medium</h2>
+							<div class="price grid2">£3.99</div>
+							<div class="quantity grid2">
+								<label for="quantity-item-2">Qty</label>
+								<input class="quantityValue" name="quantity-item-2" id="quantity-item-2" value="1" />
+								<a href="/alterProductQuantity?item=2&amp;delta=1" title="Increase quantity" class="increase">+</a>
+								<a href="/alterProductQuantity?item=2&amp;delta=-1" title="Decrease quantity" class="decrease">-</a>
+							</div>
+							<div class="total grid2">£3.99</div>
+							<div class="outlier">
+								<a href="/removeProductFromBasket?item=2" title="Remove Swim shorts" class="removeProduct"></a>
+							</div>
+							<p class="feedback grid12"></p>
+						</div>
+
+						<div class="subrow totalsRow" id="subtotal">
+							<h2 class="grid6">Subtotal</h2>
+							<div class="value grid6">£11.96</div>
+						</div>
+						<div class="subrow totalsRow" id="vat">
+							<h2 class="grid6">VAT@20%</h2>
+							<div class="value grid6">£2.39</div>
+						</div>
+						<div class="subrow totalsRow" id="total">
+							<h2 class="grid6">Total cost</h2>
+							<div class="value grid6">£14.35</div>
+						</div>
+
+						<div class="subrow" id="submit">
+							<div class="grid12">
+								<noscript>
+									<input type="submit" name="updateForm" value="Update form" /> 
+								</noscript>
+								<input type="submit" name="buyNow" value="Buy now »" /> 
+							</div>
+						</div>
+
+					</form>
+				</div>	
+			</div>
+
+		</div>
+
+		<footer>
+			<div class="row">
+				<div class="grid12">
+					<p><strong>Footer</strong> Should be pinned to bottom</p>
+				</div>
+			</div>
+		</footer>
+
+
+	</body>
+</html>
